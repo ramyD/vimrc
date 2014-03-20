@@ -20,6 +20,7 @@ set nocompatible
 
 "turns on synatx highlighting
 syntax on
+set t_Co=256
 colorscheme inkpot
 
 "makes sure the backspace key is set to work on various terminals
