@@ -128,28 +128,6 @@ hi CursorLine cterm=underline
 "underline the current tab
 hi TabLineSel cterm=underline
 
-"delete tags file after quiting vim
-"au VimLeave * call system('rm .vim_ctags')
-
-""run ctags on the current directory and make a ctags file called .vim_ctags
-"echo 'generating ctags for all child folders, ctrl-c to cancel'
-"call system('exec ctags -f `pwd`/.vim_ctags -h \"`pwd`.php\" -R --exclude=\"`pwd`\.svn\" --exclude=\"`pwd`\.cvs\" --exclude=\"`pwd`\.git\" --exclude=\"`pwd`\.hg\" --totals=no --tag-relative=yes --PHP-kinds=+cf --regex-PHP="/abstract class ([^ ]*)/\1/c,class/" --regex-PHP="/interface ([^ ]*)/\1/c,class/" --regex-PHP="/(public |static |abstract |protected |private )+function ([^ (]*)/\2/f,function/"')
-"
-"
-""set vim tags to use the vim_ctags file
-"set tags=.vim_ctags
-"
-""add some extra commands to refresh ctags
-"command RefreshTags :call system('exec ctags -f `pwd`/.vim_ctags -h \"`pwd`.php\" -R --exclude=\"`pwd`\.svn\" --exclude=\"`pwd`\.cvs\" --exclude=\"`pwd`\.git\" --exclude=\"`pwd`\.hg\" --totals=no --tag-relative=yes --PHP-kinds=+cf --regex-PHP="/abstract class ([^ ]*)/\1/c,class/" --regex-PHP="/interface ([^ ]*)/\1/c,class/" --regex-PHP="/(public |static |abstract |protected |private )+function ([^ (]*)/\2/f,function/"')
-"command RefreshCtags :call system('exec ctags -f `pwd`/.vim_ctags -h \"`pwd`.php\" -R --exclude=\"`pwd`\.svn\" --exclude=\"`pwd`\.cvs\" --exclude=\"`pwd`\.git\" --exclude=\"`pwd`\.hg\" --totals=no --tag-relative=yes --PHP-kinds=+cf --regex-PHP="/abstract class ([^ ]*)/\1/c,class/" --regex-PHP="/interface ([^ ]*)/\1/c,class/" --regex-PHP="/(public |static |abstract |protected |private )+function ([^ (]*)/\2/f,function/"')
-"command Ctags :exec ":set tags=.vim_ctags"
-"command SetCtags :exec ":set tags=.vim_ctags"
-"command SetTags :exec ":set tags=.vim_ctags"
-""command Getctags 
-""command Gettags 
-""command Generatectags 
-""command Generatetags 
-
 "vundle setup
 filetype off                   " required!
 filetype plugin indent on     " required!
@@ -170,7 +148,6 @@ Bundle 'szw/vim-tags'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'jeroenbourgois/vim-actionscript'
 Bundle 'lint.vim'
-Bundle 'git@bitbucket.org:ramyD/tntvim.git'
 "Bundle 'git://git.wincent.com/command-t.git'
 
 " vim tabs key binding
