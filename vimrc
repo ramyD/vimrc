@@ -113,6 +113,12 @@ elseif hostname == "svrlx-bbp-01"
     set smartindent
 
     map <C-P> :! php -l %<CR>
+elseif hostname == "rdaghstani-ubuntu"
+    "my bhvr ubuntu station
+    set expandtab
+    set ts=2
+    set shiftwidth=2
+    set smartindent
 elseif hostname == "RAMY-LAPTOP"
     "my laptop
 else
@@ -149,6 +155,7 @@ Bundle 'szw/vim-tags'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'jeroenbourgois/vim-actionscript'
 Bundle 'lint.vim'
+Bundle 'brookhong/DBGPavim'
 "Bundle 'git://git.wincent.com/command-t.git'
 
 " vim tabs key binding
@@ -171,6 +178,7 @@ let g:vim_tags_extension = '.tags'
 let &t_SI .= "\<Esc>[?2004h"
 let &t_EI .= "\<Esc>[?2004l"
 
+" Automatically fall into paste mode when pasting
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 function! XTermPasteBegin()
@@ -178,3 +186,8 @@ function! XTermPasteBegin()
   set paste
   return ""
 endfunction
+
+" Configure DBGPavim
+let g:dbgPavimPort = 9000
+let g:dbgPavimBreakAtEntry = 0
+let g:dbgPavimOnce = 0
