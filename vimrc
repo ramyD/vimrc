@@ -95,29 +95,16 @@ if hostname == "RDAGHSTANI-W7"
     let &t_AB="\e[48;5;%dm" 
 
     set expandtab
-    set ts=2
-    set shiftwidth=2
+    set ts=4
+    set shiftwidth=4
     set smartindent
 
     map <C-P> :!/c/xampp/php/php.exe -l %<CR>
-elseif hostname == "svrlx-bbp-01"
-    "my bhvr linux station
-    "mintty colour settings
-    let &t_Co=256 
-    let &t_AF="\e[38;5;%dm" 
-    let &t_AB="\e[48;5;%dm" 
-
-    set expandtab
-    set ts=2
-    set shiftwidth=2
-    set smartindent
-
-    map <C-P> :! php -l %<CR>
 elseif hostname == "rdaghstani-ubuntu"
     "my bhvr ubuntu station
     set expandtab
-    set ts=2
-    set shiftwidth=2
+    set ts=4
+    set shiftwidth=4
     set smartindent
 elseif hostname == "RAMY-LAPTOP"
     "my laptop
