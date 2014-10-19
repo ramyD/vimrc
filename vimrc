@@ -124,26 +124,28 @@ hi TabLineSel cterm=underline
 
 "vundle setup
 filetype off                   " required!
-filetype plugin indent on     " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
 " let Vundle manage Vundle
 " see :h vundle for more details or wiki for FAQ
 " required! 
-Bundle 'gmarik/vundle'
-Bundle 'Valloric/YouCompleteMe'
-Bundle 'kien/ctrlp.vim'
-Bundle 'scrooloose/syntastic'
-Bundle 'majutsushi/tagbar'
-Bundle 'tpope/vim-dispatch'
-Bundle 'szw/vim-tags'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'jeroenbourgois/vim-actionscript'
-Bundle 'lint.vim'
-Bundle 'brookhong/DBGPavim'
+Plugin 'gmarik/vundle'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/syntastic'
+Plugin 'majutsushi/tagbar'
+Plugin 'tpope/vim-dispatch'
+Plugin 'szw/vim-tags'
+Plugin 'Lokaltog/vim-powerline'
+Plugin 'jeroenbourgois/vim-actionscript'
+Plugin 'lint.vim'
+Plugin 'brookhong/DBGPavim'
 "Bundle 'git://git.wincent.com/command-t.git'
+
+call vundle#end()
+filetype plugin indent on     " required!
 
 " vim tabs key binding
 nmap <F8> :TagbarToggle<CR>
